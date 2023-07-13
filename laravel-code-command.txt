@@ -8,3 +8,6 @@ Barryvdh\Debugbar\ServiceProvider::class,
 Debugbar::info('Info for Debugbar');
 
 Debugbar:: info, error, warning, addMessage, startMeasure
+
+
+php artisan make:controller postController
