@@ -1,0 +1,10 @@
+composer require barryvdh/laravel-debugbar --dev
+
+
+add config folder app.php
+Barryvdh\Debugbar\ServiceProvider::class,
+
+
+Debugbar::info('Info for Debugbar');
+
+Debugbar:: info, error, warning, addMessage, startMeasure
