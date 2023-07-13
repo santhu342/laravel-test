@@ -11,3 +11,7 @@ Debugbar:: info, error, warning, addMessage, startMeasure
 
 
 php artisan make:controller postController
+
+php artisan make:controller postController --resource
+
+php artisan route:list
