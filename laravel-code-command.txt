@@ -15,3 +15,22 @@ php artisan make:controller postController
 php artisan make:controller postController --resource
 
 php artisan route:list
+
+
+
+Route::get('/blog', [postController::class, 'index']);
+Route::get('/blog/{$id}', [postController::class, 'show']);
+
+
+Route::get('/blog/create', [postController::class, 'create']);
+Route::post('/blog/', [postController::class, 'store']);
+
+Route::get('/blog/edit/{$id}', [postController::class, 'edit']);
+Route::patch('/blog/{$id}', [postController::class, 'update']);
+
+Route::delete('/blog/{$id}', [postController::class, 'destroy']);
+
+
+Route::match(['get','post'], '/blog', [postController::class, 'index'])
+
+
