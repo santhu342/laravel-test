@@ -5,18 +5,27 @@ use App\Http\Controllers\postController;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
+
 */
+// GET
+//Route::get('/blog', [postController::class, 'index']);
+Route::get('/blog/{$id}', [postController::class, 'show']);
 
-// Route::get('/blog', [postController::class, 'index']);
 
-Route::resource('blog',postController::class);
+Route::get('/blog/create', [postController::class, 'create']);
+Route::post('/blog/', [postController::class, 'store']);
+
+Route::get('/blog/edit/{$id}', [postController::class, 'edit']);
+Route::patch('/blog/{$id}', [postController::class, 'update']);
+
+Route::delete('/blog/{$id}', [postController::class, 'destroy']);
+
+Route::match(['get','post'], '/blog', [postController::class, 'index']);
+
+// Route::any('/blog', [postController::class, 'index']);
+
+// Route::resource('blog',postController::class);
+
+Route::view('/blog', 'blog.index', ['name' => 'Santhosh Kumar']);
 
 Route::get('/',homeController::class);
