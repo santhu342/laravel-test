@@ -2,4 +2,4 @@
     this blog index blade files
 </h1>
 
-{{ $name }}
+<a href={{  route('blog.index')  }} >blog </a>
