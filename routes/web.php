@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 // GET
 Route::get('/blog', [postController::class, 'index'])->name('blog.index');
 
-Route::get('/blog/{id}', [postController::class, 'show']);
+Route::get('/blog/{id}', [postController::class, 'show'])->name('blog.show');
 
 
 Route::get('/blog/{id}/{name}', [postController::class, 'show'])
@@ -20,13 +20,13 @@ Route::get('/blog/{id}/{name}', [postController::class, 'show'])
 		]);
 
 
-Route::get('/blog/create', [postController::class, 'create']);
-Route::post('/blog/', [postController::class, 'store']);
+Route::get('/blog/create', [postController::class, 'create'])->name('blog.create');
+Route::post('/blog/', [postController::class, 'store'])->name('blog.store');
 
-Route::get('/blog/edit/{id}', [postController::class, 'edit']);
-Route::patch('/blog/{id}', [postController::class, 'update']);
+Route::get('/blog/edit/{id}', [postController::class, 'edit'])->name('blog.edit');
+Route::patch('/blog/{id}', [postController::class, 'update'])->name('blog.update');
 
-Route::delete('/blog/{id}', [postController::class, 'destroy']);
+Route::delete('/blog/{id}', [postController::class, 'destroy'])->name('blog.destroy');
 
 //Route::match(['get','post'], '/blog', [postController::class, 'index']);
 
