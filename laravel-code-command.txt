@@ -51,11 +51,10 @@ Route::prefix('')->group(function (){
 Route::fallback(fallback::class);
 1:37 min
 
-
-
-
 php astisan tinker
 
 DB::connection()->getPdo();
+
+php artisan make:migration create_posts_table
 
 
