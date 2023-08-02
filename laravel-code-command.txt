@@ -40,3 +40,22 @@ Route::delete('/blog/{id}', [postController::class, 'destroy']);
 //Route::match(['get','post'], '/blog', [postController::class, 'index'])
 
 Route::get('/blog', [postController::class, 'index'])->name('blog.index');
+
+
+Route::prefix('')->group(function (){
+	
+});
+
+
+// route fall back page.
+Route::fallback(fallback::class);
+1:37 min
+
+
+
+
+php astisan tinker
+
+DB::connection()->getPdo();
+
+
