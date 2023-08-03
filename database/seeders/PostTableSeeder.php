@@ -21,7 +21,8 @@ class PostTableSeeder extends Seeder
                 'body' => 'body one',
                 'img_path' => 'empty',
                 'is_published' => false,
-                'min_to_read' => 5
+                'min_to_read' => 5,
+                'ip_address' => '123'
             ],
             [
                 'title' => 'Post Two',
@@ -29,12 +30,13 @@ class PostTableSeeder extends Seeder
                 'body' => 'body Two',
                 'img_path' => 'empty',
                 'is_published' => false,
-                'min_to_read' => 5
+                'min_to_read' => 5,
+                'ip_address' => '123'
             ]
         ];
 
         foreach($posts as $key => $value){
-            Post::created($value);
+            Post::create($value);
         }
     }
 }
