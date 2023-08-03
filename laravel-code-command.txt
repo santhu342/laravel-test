@@ -57,4 +57,12 @@ DB::connection()->getPdo();
 
 php artisan make:migration create_posts_table
 
+php artisan migrate
+
+php artisan migrate:reset
+
+php artisan migrate:refresh
+
+php artisan migrate
+
 
