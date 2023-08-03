@@ -65,4 +65,17 @@ php artisan migrate:refresh
 
 php artisan migrate
 
+php artisan make:seeder PostTableSeeder
+
+php artisan make:model Post
+
+
+$posts = [];
+
+
+foreach($posts as $key => $value){
+            Post::created($value);
+        }
+
+$this->call(PostTableSeeder::class)
 

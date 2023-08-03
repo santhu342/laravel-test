@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class PostTableSeeder extends Seeder
@@ -20,7 +21,7 @@ class PostTableSeeder extends Seeder
                 'body' => 'body one',
                 'img_path' => 'empty',
                 'is_published' => false,
-                'min_to_read' => 5,
+                'min_to_read' => 5
             ],
             [
                 'title' => 'Post Two',
@@ -28,8 +29,12 @@ class PostTableSeeder extends Seeder
                 'body' => 'body Two',
                 'img_path' => 'empty',
                 'is_published' => false,
-                'min_to_read' => 5,
-            ],
+                'min_to_read' => 5
+            ]
         ];
+
+        foreach($posts as $key => $value){
+            Post::created($value);
+        }
     }
 }
