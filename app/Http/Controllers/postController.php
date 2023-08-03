@@ -16,8 +16,9 @@ class postController extends Controller
     {
         //
         $posts = DB::table('posts')
-                ->select()
+                ->select('title')
                 ->where('id',2)
+                ->whereBetween('min_to_read',[2,5])
                 ->get();
 
         dd($posts);

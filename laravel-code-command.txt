@@ -90,3 +90,10 @@ $posts = DB::select('select * from posts where id = ?' , [1]);
 
 $posts = DB::select('select * from posts where id = :id' , ['id' => 1]);
 
+$posts = DB::table('posts')
+                ->select()
+                ->where('id',2)
+				->whereBetween('min_to_read',[2,5])
+				
+                ->get();
+
