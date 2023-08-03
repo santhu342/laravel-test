@@ -79,3 +79,14 @@ foreach($posts as $key => $value){
 
 $this->call(PostTableSeeder::class)
 
+
+php artisan make:factor postFactory
+
+php artisan migrate --seed
+
+php artisan DB:seed
+
+$posts = DB::select('select * from posts where id = ?' , [1]);
+
+$posts = DB::select('select * from posts where id = :id' , ['id' => 1]);
+
