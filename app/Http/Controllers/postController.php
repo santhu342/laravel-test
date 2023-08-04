@@ -19,6 +19,7 @@ class postController extends Controller
                 ->select('title')
                 ->where('id',2)
                 ->whereBetween('min_to_read',[2,5])
+				->whereIn('min_to_read',[2,5,6])
                 ->get();
 
         dd($posts);
