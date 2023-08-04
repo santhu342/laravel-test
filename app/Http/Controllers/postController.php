@@ -15,10 +15,10 @@ class postController extends Controller
     public function index()
     {
         //
-        $posts = DB::table('posts')->get();
+        $posts = DB::table('posts')->find(1);
 
         
-        return view('blog.index')->with('posts', $posts);
+        return view('blog.index' , ['posts' => $posts] );
     }
 
     /**

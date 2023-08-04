@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <h1 class="text-3xl p-2 font-bold">
-        Tailwind 3.0
-    </h1>
+    {{ $posts->title }}
 </body>
 </html>
