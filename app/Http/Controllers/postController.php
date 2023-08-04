@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 
 class postController extends Controller
 {
@@ -15,10 +16,11 @@ class postController extends Controller
     public function index()
     {
         //
-        $posts = DB::table('posts')->find(1);
-
+        $posts = post::all();
         
-        return view('blog.index' , ['posts' => $posts] );
+        return view('blog.index' ,[
+            'posts' => $posts
+        ] );
     }
 
     /**
@@ -50,7 +52,11 @@ class postController extends Controller
      */
     public function show($id)
     {
-        return $id;
+        $post = post::findOrFail($id);
+        
+        return view('blog.show' , [
+            'post' => $post
+        ]);
     }
 
     /**
