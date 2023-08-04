@@ -106,6 +106,8 @@ npm install tailwindcss -D postcss
 
 npx tailwindcss init
 
+npm run watch
+
 
 
 
