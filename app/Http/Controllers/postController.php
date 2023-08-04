@@ -15,15 +15,10 @@ class postController extends Controller
     public function index()
     {
         //
-        $posts = DB::table('posts')
-                ->select('title')
-                ->where('id',2)
-                ->whereBetween('min_to_read',[2,5])
-				->whereIn('min_to_read',[2,5,6])
-                ->get();
+        $posts = DB::table('posts')->get();
 
-        dd($posts);
-        return view('blog.index');
+        
+        return view('blog.index')->with('posts', $posts);
     }
 
     /**
