@@ -31,6 +31,8 @@ class postController extends Controller
     public function create()
     {
         //
+        //return "ok";
+        //return view('blog.create');
     }
 
     /**
