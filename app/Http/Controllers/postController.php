@@ -31,8 +31,7 @@ class postController extends Controller
     public function create()
     {
         //
-        //return "ok";
-        //return view('blog.create');
+        return view('blog.create');
     }
 
     /**
@@ -44,6 +43,7 @@ class postController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request->all());
     }
 
     /**
@@ -54,7 +54,7 @@ class postController extends Controller
      */
     public function show($id)
     {
-        $post = post::findOrFail($id);
+        $post = posts::findOrFail($id);
         
         return view('blog.show' , [
             'post' => $post
