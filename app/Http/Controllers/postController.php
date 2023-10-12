@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-
 class postController extends Controller
 {
     /**
@@ -54,7 +53,7 @@ class postController extends Controller
      */
     public function show($id)
     {
-        $post = posts::findOrFail($id);
+        $post = post::findOrFail($id);
         
         return view('blog.show' , [
             'post' => $post
@@ -79,7 +78,7 @@ class postController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
         //
     }

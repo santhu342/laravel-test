@@ -20,7 +20,7 @@
 <body>
     <div class="w-4/5 mx-auto">
         <div class="pt-10">
-            <a href="{{ URL::previous() }}"
+            <a href="{{ route('blog.index') }}"
                class="text-green-500 italic hover:text-green-400 hover:border-b-2 border-green-400 pb-3 transition-all py-20">
                 < Back to previous page
             </a>
@@ -32,7 +32,7 @@
 
         <div class="block lg:flex flex-row">
             <div class="basis-9/12 text-center sm:block sm:text-left">
-                <span class="text-left sm:text-center sm:text-left sm:inline block text-gray-900 pb-10 sm:pt-0 pt-0 sm:pt-10 pl-0 sm:pl-4 -mt-8 sm:-mt-0">
+                <span class="text-left sm:text-center sm:inline block text-gray-900 pb-10 sm:pt-0 pt-0 pl-0 sm:pl-4 -mt-8 sm:-mt-0">
                     Made by:
                     <a
                         href=""
